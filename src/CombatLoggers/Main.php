@@ -7,13 +7,10 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\player\Player;
-use pocketmine\entity\Location;
-use pocketmine\Server;
-use pocketmine\scheduler\ClosureTask;
-use pocketmine\world\World;
 
 class Main extends PluginBase implements Listener {
 
+    /** @var array<string, int> */
     private array $combatTagged = [];
 
     public function onEnable(): void {
@@ -42,9 +39,8 @@ class Main extends PluginBase implements Listener {
 
     private function spawnNpc(Player $player): void {
         $location = $player->getLocation();
-        $world = $location->getWorld();
-
         $npc = new LoggerNPC($location, $player->getName(), $player->getInventory()->getContents());
-        $world->addActor($npc);
+        $npc->spawnToAll();
     }
 }
+
