@@ -53,3 +53,5 @@ This plugin prevents players from safely logging out during combat by spawning a
 - Broadcast death message when the NPC is killed.
 - Add economy rewards for killing combat loggers.
 - Integrate with ban systems or punish repeated loggers.
+
+MADE BY LIL KEV
