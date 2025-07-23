@@ -9,8 +9,6 @@ use pocketmine\entity\Skin;
 
 class LoggerNPC extends Human {
 
-    private string $originalName;
-
     /**
      * @param Location $location
      * @param string $name
@@ -19,8 +17,7 @@ class LoggerNPC extends Human {
     public function __construct(Location $location, string $name, array $inventoryItems) {
         $skin = new Skin("Standard_Custom", str_repeat("\x00", 8192));
         parent::__construct($location, $skin);
-        
-        $this->originalName = $name;
+
         $this->setNameTag("Combat Logger: " . $name);
         $this->setNameTagAlwaysVisible();
 
