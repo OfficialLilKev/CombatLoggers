@@ -1,5 +1,5 @@
 name: CombatLogger
-main: CombatLogger\Main
+main: CombatLoggers\Main
 version: 1.0.0
 api: 5.0.0
 author: Lil Kev, Either go by Bajan or Kev
