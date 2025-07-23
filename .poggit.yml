@@ -1,6 +1,13 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/OfficialLilKev/CombatLoggers
+# Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/OfficialLilKev/CombatLogger
 build-by-default: true
+
 branches:
 - main
-projects: []
-...
+
+projects:
+  CombatLogger:
+    path: ""
+    type: plugin
+    name: CombatLogger
+    description: Combat log prevention plugin that spawns a killable NPC when a player logs out during PvP.
+    version: 1.0.0
